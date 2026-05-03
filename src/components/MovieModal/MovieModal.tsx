@@ -3,12 +3,12 @@ import { useEffect } from "react";
 import type { Movie } from "../../types/movie";
 import css from "./MovieModal.module.css";
 
-interface ModalProps {
+interface MovieModalProps {
   movie: Movie;
   onClose: () => void;
 }
 
-export default function MovieModal({movie, onClose}: ModalProps){
+export default function MovieModal({movie, onClose}: MovieModalProps){
 //! закриття модалки при натисканні поза модалки
   const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
